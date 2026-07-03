@@ -1,3 +1,6 @@
+build.sh
+build/
+rebuild-debug.sh
 
 # macOS stuff
 .DS_Store

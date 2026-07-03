@@ -218,6 +218,14 @@ import Cocoa
                 new.animationCurve = ovr
             }
             
+            /// Apply trackpad simulation globally if enabled
+            if new.u_trackpadSimulation {
+                new.animationCurveParams?.sendGestureScrolls = true
+                if new.animationCurveParams?.useDragCurve == true {
+                    new.animationCurveParams?.sendMomentumScrolls = true
+                }
+            }
+            
             /// Get accelerationCurve
             if u_speed == kMFScrollSpeedSystem && !usePreciseMod && !useQuickMod {
                 new.accelerationCurve = nil
@@ -439,13 +447,13 @@ import Cocoa
     
     private lazy var _animationCurveName = {
         
-        /// Maybe we should move the trackpad sim settings out of the MFScrollAnimationCurveName, (because that's weird?)
+        /// Trackpad simulation decoupled
         
         switch u_smoothness {
         case kMFScrollSmoothnessOff:        return kMFScrollAnimationCurveNameNone
         case kMFScrollSmoothnessLow:        return kMFScrollAnimationCurveNameVeryLowInertia
         case kMFScrollSmoothnessRegular:    return kMFScrollAnimationCurveNameLowInertia
-        case kMFScrollSmoothnessHigh:       return u_trackpadSimulation ? kMFScrollAnimationCurveNameHighInertiaPlusTrackpadSim : kMFScrollAnimationCurveNameHighInertia
+        case kMFScrollSmoothnessHigh:       return kMFScrollAnimationCurveNameHighInertia
         default: fatalError()
         }
     }()
@@ -517,8 +525,8 @@ import Cocoa
     @objc let dragCoefficient: Double
     @objc let stopSpeed: Int
     /// Other params
-    @objc let sendGestureScrolls: Bool  /// If false, send simple continuous scroll events (like MMF 2) instead of using GestureScrollSimulator
-    @objc let sendMomentumScrolls: Bool /// Only works if sendGestureScrolls and useDragCurve is true. If true, make Scroll.m send momentumScroll events (what the Apple Trackpad sends after lifting your fingers off) when scrolling is controlled by the dragCurve (and in some other cases, see TouchAnimator). Only use this when the dragCurve closely mimicks the Apple Trackpads otherwise apps like Xcode will behave differently from other apps during momentum scrolling.
+    @objc var sendGestureScrolls: Bool  /// If false, send simple continuous scroll events (like MMF 2) instead of using GestureScrollSimulator
+    @objc var sendMomentumScrolls: Bool /// Only works if sendGestureScrolls and useDragCurve is true. If true, make Scroll.m send momentumScroll events (what the Apple Trackpad sends after lifting your fingers off) when scrolling is controlled by the dragCurve (and in some other cases, see TouchAnimator). Only use this when the dragCurve closely mimicks the Apple Trackpads otherwise apps like Xcode will behave differently from other apps during momentum scrolling.
     
     /// Init
     init(baseCurve: Bezier?, speedSmoothing: Double, baseMsPerStep: Int, baseMsPerStepCurve: Curve?, dragExponent: Double, dragCoefficient: Double, stopSpeed: Int, sendGestureScrolls: Bool, sendMomentumScrolls: Bool) {

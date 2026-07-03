@@ -95,8 +95,8 @@ class ScrollTabController: NSViewController {
         
         smooth.bindingTarget <~ smoothPicker.reactive.selectedIdentifiers.map({ $0!.rawValue })
         smoothPicker.reactive.selectedIdentifier <~ smooth.producer.map({ NSUserInterfaceItemIdentifier($0) })
-         
-        trackpadSection.reactive.isCollapsed <~ smooth.producer.map({ $0 != "high" })
+        // Trackpad Simulation is now decoupled from smoothness level
+        trackpadSection.reactive.isCollapsed <~ smooth.producer.map({ _ in false })
         
         let MF_TEST = 0
         if MF_TEST == 0 { /// Remove the experimental "low" option in release builds
