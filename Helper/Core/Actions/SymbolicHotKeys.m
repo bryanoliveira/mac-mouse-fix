@@ -107,7 +107,7 @@ CG_EXTERN CGError CGSSetSymbolicHotKeyValue(CGSSymbolicHotKey hotKey, unichar ke
 
 + (void)post:(CGSSymbolicHotKey)shk {
 
-    DDLogDebug(@"[SymbolicHotKeys +post:] called on thread: %@", NSThread.currentThread);
+    DDLogDebug("[SymbolicHotKeys +post:] called on thread: %@", NSThread.currentThread);
     
     MFCFRunLoopPerform(CFRunLoopGetMain(), nil, ^{ /// Should we use the `_sync` variant here? Might be more responsive? 
         
@@ -155,7 +155,7 @@ CG_EXTERN CGError CGSSetSymbolicHotKeyValue(CGSSymbolicHotKey hotKey, unichar ke
             }
         }
         
-        DDLogDebug(@"[SymbolicHotKeys +post:] CurrentBinding: %@", vardesc(shk, keq_fromSHKAPI, vkc_fromSHKAPI, binarystring(mods_fromSHKAPI), vkc_reachable));
+        DDLogDebug("[SymbolicHotKeys +post:] CurrentBinding: %@", vardesc(shk, keq_fromSHKAPI, vkc_fromSHKAPI, binarystring(mods_fromSHKAPI), vkc_reachable));
         
         BOOL oldBindingIsUsable = vkc_reachable != kMFVK_Null;
         
@@ -182,7 +182,7 @@ CG_EXTERN CGError CGSSetSymbolicHotKeyValue(CGSSymbolicHotKey hotKey, unichar ke
             
             CGError err = CGSSetSymbolicHotKeyValue(shk, keq_new, vkc_new, mods_new);
             if (err != kCGErrorSuccess) {
-                DDLogError(@"[SymbolicHotKeys +post:] Error setting shk params: %d", err); /// We still post the keyboard events in this case, bc maybe it will still worked despite the error?
+                DDLogError("[SymbolicHotKeys +post:] Error setting shk params: %d", err); /// We still post the keyboard events in this case, bc maybe it will still worked despite the error?
                 assert(false);
             }
             /// Post keyboard events
@@ -250,7 +250,7 @@ CGKeyCode searchVKCForStr(MFKeyboardType keyboardType, const UCKeyboardLayout *k
             
             /// Validate
             if (!(bestGuessResult < kMFVK_FirstAppleKey)) {
-                DDLogError(@"bestGuessResult seems to be an Apple key. (%d) Those don't generate unicodeStrings, which means we can't search for them using this function. [Dec 2024]", bestGuessResult);
+                DDLogError("bestGuessResult seems to be an Apple key. (%d) Those don't generate unicodeStrings, which means we can't search for them using this function. [Dec 2024]", bestGuessResult);
                 assert(false);
             }
             
@@ -298,7 +298,7 @@ NSString *getStrForVKC(MFKeyboardType keyboardType, const UCKeyboardLayout *keyb
     
     /// NULL safety
     if (keyboardType == kMFKeyboardTypeNull || keyboardLayout == NULL || vkc == kMFVK_Null) { /// Not sure if necessary (UCKeyTranslate might fail anyways?)
-        DDLogError(@"Some input is unexpectedly NULL, %d, %p, %d", keyboardType, keyboardLayout, vkc);
+        DDLogError("Some input is unexpectedly NULL, %d, %p, %d", keyboardType, keyboardLayout, vkc);
         assert(false);
         return nil;
     }
@@ -335,13 +335,13 @@ NSString *getStrForVKC(MFKeyboardType keyboardType, const UCKeyboardLayout *keyb
     ///         -> Based on my testing, when using `kUCKeyActionDisplay` instead of `kUCKeyActionDown` then this is not necessary – at least for the aforementioned accent key on the German layout.
     
     if (deadKeyState && keyAction != kUCKeyActionDisplay) {
-        DDLogDebug(@"KeyboardSimulator.m: DeadKeyState is non-zero. Translating space to produce the character for the dead key. String so far: '%@' (Should be empty), deadKeyState: %d\n", [NSString stringWithCharacters:unicodeString length:actualStringLength], deadKeyState);
+        DDLogDebug("KeyboardSimulator.m: DeadKeyState is non-zero. Translating space to produce the character for the dead key. String so far: '%@' (Should be empty), deadKeyState: %d\n", [NSString stringWithCharacters:unicodeString length:actualStringLength], deadKeyState);
         r = UCKeyTranslate(keyboardLayout, kVK_Space, kUCKeyActionDown, modifierKeyState, keyboardType, keyTranslateOptions, &deadKeyState, maxStringLength, &actualStringLength, unicodeString);
     }
     
     /// Check errors
     if (r != noErr) {
-        DDLogError(@"KeyboardSimulator.m: UCKeyTranslate() failed with error code: %d", r);
+        DDLogError("KeyboardSimulator.m: UCKeyTranslate() failed with error code: %d", r);
         return nil;
     }
     
@@ -398,7 +398,7 @@ NSString *getStrForVKC(MFKeyboardType keyboardType, const UCKeyboardLayout *keyb
                 if (c < arrcount(macRomanCharToPlaceholderMap) && macRomanCharToPlaceholderMap[c] != NULL) {
                     return macRomanCharToPlaceholderMap[c]; /// Output a placeholder based on our MacRoman character map
                 } else {
-                    DDLogError(@"Control character %c not covered by our macRoman map.", c);
+                    DDLogError("Control character %c not covered by our macRoman map.", c);
                     assert(false);
                     return [NSString stringWithCharacters:unicodeString length:actualStringLength]; /// Output the UCKeyTranslate output directly. The control character will print (at least in the console) using ASCII caret notation.
                 }
@@ -648,7 +648,7 @@ MFVKCAndFlags *_Nonnull MFEmulateNSMenuItemRemapping(CGKeyCode vkc, CGEventFlags
     /// Prelude
     MFVKCAndFlags *_Nonnull in_vkcShortcut = [[MFVKCAndFlags alloc] initWith_vkc: vkc modifierMask: modifierMask];
     #define fail(reason_formatAndArgs...) ({                                                                \
-        DDLogError(@"MFEmulateNSMenuItemRemapping: failure: " reason_formatAndArgs);                        \
+        DDLogError("MFEmulateNSMenuItemRemapping: failure: " reason_formatAndArgs);                        \
         assert(false);                                                                                      \
         return in_vkcShortcut;                                                                              \
     })
@@ -734,12 +734,12 @@ MFVKCAndFlags *_Nonnull MFEmulateNSMenuItemRemapping(CGKeyCode vkc, CGEventFlags
         };
         TIKeyboardShortcut *in_keqShortcut  = [TIKeyboardShortcut shortcutWithKeyEquivalent: in_keq modifierFlags: (NSEventModifierFlags)in_vkcShortcut.modifierMask];
         TIKeyboardShortcut *out_keqShortcut = [TIKeyboardShortcut localizedKeyboardShortcut: in_keqShortcut forKeyboardLayout: currentKBLayout_Name withAttributes: attrs];
-        if (!out_keqShortcut)                       fail(@"out_keqShortcut is nil");
-        if (!out_keqShortcut.keyEquivalent.length)  fail(@"out_keqShortcut.keyEquivalent is empty");
+        if (!out_keqShortcut)                       fail("out_keqShortcut is nil");
+        if (!out_keqShortcut.keyEquivalent.length)  fail("out_keqShortcut.keyEquivalent is empty");
         out_keq           = out_keqShortcut.keyEquivalent;
         out_modifierFlags = out_keqShortcut.modifierFlags;
         
-        DDLogDebug(@"MFEmulateNSMenuItemRemapping: localization state: %@", vardesc(currentKBLayout_Name, in_keqShortcut, out_keqShortcut, attrs));
+        DDLogDebug("MFEmulateNSMenuItemRemapping: localization state: %@", vardesc(currentKBLayout_Name, in_keqShortcut, out_keqShortcut, attrs));
     }
     else {
         /// Turn the shortcut localization off pre-macOS 12.0 (Monterey)
@@ -754,7 +754,7 @@ MFVKCAndFlags *_Nonnull MFEmulateNSMenuItemRemapping(CGKeyCode vkc, CGEventFlags
     {
         const UCKeyboardLayout *currentKBLayout_Data = MFTISGetLayoutPointerFromInputSource(currentKBLayout_InputSource);
         CGKeyCode out_vkc = searchVKCForStr(currentKBType_MF, currentKBLayout_Data, in_vkcShortcut.vkc, out_keq, kMFModifierFlagsNull); /// Should we search for shiftKeyEquivalents here? Currently, we only use this for localizing `[`and `]` for the 'Universal Back and Forward' feature – and `kMFModifierFlagsNull` works fine [Aug 2025]
-         if (out_vkc == kMFVK_Null) fail(@"No vkc found for localized keq");
+         if (out_vkc == kMFVK_Null) fail("No vkc found for localized keq");
          out_vkcShortcut = [[MFVKCAndFlags alloc] initWith_vkc: out_vkc modifierMask: (CGEventFlags)out_modifierFlags];
     }
     

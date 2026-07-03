@@ -94,8 +94,6 @@
 		4F58FE002C56DE9B00926A00 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58FDFF2C56DE9B00926A00 /* Logging.swift */; };
 		4F58FE022C56DE9B00926A00 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58FDFF2C56DE9B00926A00 /* Logging.swift */; };
 		4F58FE032C56E65900926A00 /* AnnotationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C73FD2C4FB5D2001D97C3 /* AnnotationUtility.m */; };
-		4F58FE102C571DDD00926A00 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 4F58FE0F2C571DDD00926A00 /* CocoaLumberjack */; };
-		4F58FE122C571DE200926A00 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F58FE112C571DE200926A00 /* CocoaLumberjackSwift */; };
 		4F58FE132C57297400926A00 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58FDFF2C56DE9B00926A00 /* Logging.swift */; };
 		4F58FE142C57BAFA00926A00 /* NSTextField+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12951F28D2D5E1009A49AB /* NSTextField+Extentions.swift */; };
 		4F5971E52901763D00A32656 /* MathObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5971E42901763D00A32656 /* MathObjc.m */; };
@@ -299,8 +297,13 @@
 		4FD860CC266EF55A004F76C8 /* ScrollConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD860CB266EF55A004F76C8 /* ScrollConfig.swift */; };
 		4FD9A7D128BA2A810006DF4B /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9A7D028BA2A810006DF4B /* SecureStorage.swift */; };
 		4FD9A7D228BA2A8A0006DF4B /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9A7D028BA2A810006DF4B /* SecureStorage.swift */; };
+		4FDA9D512FE96D8D00610BEB /* SkyLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F28B7F52D49141E006928A6 /* SkyLight.framework */; };
 		4FDB5F4A2D4F85A900164F97 /* NSCharacterSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB5F492D4F85A900164F97 /* NSCharacterSet+Additions.m */; };
 		4FDB5F4B2D4F85A900164F97 /* NSCharacterSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB5F492D4F85A900164F97 /* NSCharacterSet+Additions.m */; };
+		4FDB94392FE75270001E05CB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDB94362FE75270001E05CB /* MainMenu.xib */; };
+		4FDB943A2FE75270001E05CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB942F2FE75270001E05CB /* AppDelegate.m */; };
+		4FDB943B2FE75270001E05CB /* FixDockSwipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB94332FE75270001E05CB /* FixDockSwipes.m */; };
+		4FDB943C2FE75270001E05CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB94342FE75270001E05CB /* main.m */; };
 		4FDE759A28B1401400662314 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE759928B1401400662314 /* License.swift */; };
 		4FDE759B28B1401400662314 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE759928B1401400662314 /* License.swift */; };
 		4FDE759E28B174E700662314 /* TrialCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE759D28B174E700662314 /* TrialCounter.swift */; };
@@ -330,8 +333,6 @@
 		4FE78C462C50362800C54103 /* DisableSwiftBridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE78C392C50177800C54103 /* DisableSwiftBridging.swift */; };
 		4FE78C472C50371200C54103 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE78C432C502A5F00C54103 /* NSString+Additions.m */; };
 		4FEA63CF2921510F00E464D6 /* NSImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA63CD2921510E00E464D6 /* NSImage+Additions.m */; };
-		4FEB660F2793510300E6A111 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 4FEB660E2793510300E6A111 /* CocoaLumberjack */; };
-		4FEB66112793510800E6A111 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4FEB66102793510800E6A111 /* CocoaLumberjackSwift */; };
 		4FEBE6622E456DA2005FF70E /* CAAnimationCurveUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEBE6612E456DA2005FF70E /* CAAnimationCurveUtility.m */; };
 		4FEBE6632E456DA2005FF70E /* CAAnimationCurveUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEBE6612E456DA2005FF70E /* CAAnimationCurveUtility.m */; };
 		4FEC9668278BBDC600548604 /* NSColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC9667278BBDC600548604 /* NSColor+Additions.m */; };
@@ -2391,6 +2392,12 @@
 		4FD9A7D028BA2A810006DF4B /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 		4FDB5F482D4F85A900164F97 /* NSCharacterSet+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+Additions.h"; sourceTree = "<group>"; };
 		4FDB5F492D4F85A900164F97 /* NSCharacterSet+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Additions.m"; sourceTree = "<group>"; };
+		4FDB941A2FE743AA001E05CB /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDB942E2FE75270001E05CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4FDB942F2FE75270001E05CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4FDB94332FE75270001E05CB /* FixDockSwipes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixDockSwipes.m; sourceTree = "<group>"; };
+		4FDB94342FE75270001E05CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FDB94352FE75270001E05CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4FDC127528A2C6160076972E /* ReactiveConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveConfig.swift; sourceTree = "<group>"; };
 		4FDE757D28B0E66900662314 /* License.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		4FDE759928B1401400662314 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
@@ -2625,10 +2632,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F262D262C64E06500773789 /* libcmark.a in Frameworks */,
-				4F58FE102C571DDD00926A00 /* CocoaLumberjack in Frameworks */,
 				4F39BC26263AC31600FDF692 /* Sparkle.framework in Frameworks */,
 				4FA40CF228A0CA3900499E53 /* ReactiveCocoa in Frameworks */,
-				4F58FE122C571DE200926A00 /* CocoaLumberjackSwift in Frameworks */,
 				4F28B7F62D49141F006928A6 /* SkyLight.framework in Frameworks */,
 				4FA40CEF28A0CA0A00499E53 /* ReactiveSwift in Frameworks */,
 			);
@@ -2638,13 +2643,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEB660F2793510300E6A111 /* CocoaLumberjack in Frameworks */,
 				4F262D272C64E06500773789 /* libcmark.a in Frameworks */,
 				4FBD52622E47EFF400C39A44 /* TextInput.framework in Frameworks */,
 				4F7F47D028A5B5F200290BBD /* ReactiveCocoa in Frameworks */,
 				4F7F47CE28A5B5EC00290BBD /* ReactiveSwift in Frameworks */,
-				4FEB66112793510800E6A111 /* CocoaLumberjackSwift in Frameworks */,
 				4F28B7F82D49144E006928A6 /* SkyLight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDB94172FE743AA001E05CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDA9D512FE96D8D00610BEB /* SkyLight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6747,6 +6758,16 @@
 			path = TrialSection;
 			sourceTree = "<group>";
 		};
+		4F8605A22FE81F5D00CC1147 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB942E2FE75270001E05CB /* AppDelegate.h */,
+				4FDB942F2FE75270001E05CB /* AppDelegate.m */,
+				4FDB94362FE75270001E05CB /* MainMenu.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		4F8A8DBB287EFB4D00786BCC /* Extern */ = {
 			isa = PBXGroup;
 			children = (
@@ -7226,6 +7247,7 @@
 				4F422EF023469B2B00AA6E22 /* Other */,
 				4FA1ACE025E85904007DB95B /* LocalizationScreenshotTaker */,
 				4F1667E32C6A6782009E4924 /* XCStringsDummyApp */,
+				4FDB94372FE75270001E05CB /* Tests */,
 				4FCECD8121092354001F1078 /* Products */,
 				4FDECCD528A3A37800DDEE91 /* Frameworks */,
 			);
@@ -7238,6 +7260,7 @@
 				4F94F5EE25E5EC2500D9F24A /* Mac Mouse Fix.app */,
 				4F8B01A92C348A3A00F3AF8D /* Localization Screenshot Taker.xctest */,
 				4F1667C92C6A6717009E4924 /* XCStringsDummyApp.app */,
+				4FDB941A2FE743AA001E05CB /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -7327,6 +7350,16 @@
 				4FD9A7CE28BA29CB0006DF4B /* default_secureStorage.plist */,
 			);
 			path = SecureStorage;
+			sourceTree = "<group>";
+		};
+		4FDB94372FE75270001E05CB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB94342FE75270001E05CB /* main.m */,
+				4FDB94332FE75270001E05CB /* FixDockSwipes.m */,
+				4F8605A22FE81F5D00CC1147 /* Other */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		4FDE757C28B0E35E00662314 /* License */ = {
@@ -7992,8 +8025,6 @@
 			packageProductDependencies = (
 				4FA40CEE28A0CA0A00499E53 /* ReactiveSwift */,
 				4FA40CF128A0CA3900499E53 /* ReactiveCocoa */,
-				4F58FE0F2C571DDD00926A00 /* CocoaLumberjack */,
-				4F58FE112C571DE200926A00 /* CocoaLumberjackSwift */,
 			);
 			productName = "Mac Mouse Fix";
 			productReference = 4F94F5EE25E5EC2500D9F24A /* Mac Mouse Fix.app */;
@@ -8015,13 +8046,30 @@
 			);
 			name = "Mac Mouse Fix Helper";
 			packageProductDependencies = (
-				4FEB660E2793510300E6A111 /* CocoaLumberjack */,
-				4FEB66102793510800E6A111 /* CocoaLumberjackSwift */,
 				4F7F47CD28A5B5EC00290BBD /* ReactiveSwift */,
 				4F7F47CF28A5B5F200290BBD /* ReactiveCocoa */,
 			);
 			productName = "Mouse Remap Helper";
 			productReference = 4FCECD8021092354001F1078 /* Mac Mouse Fix Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FDB94192FE743AA001E05CB /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FDB94262FE743AD001E05CB /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				4FDB94162FE743AA001E05CB /* Sources */,
+				4FDB94172FE743AA001E05CB /* Frameworks */,
+				4FDB94182FE743AA001E05CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			packageProductDependencies = (
+			);
+			productName = Tests;
+			productReference = 4FDB941A2FE743AA001E05CB /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -8051,6 +8099,9 @@
 					4FCECD7F21092354001F1078 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1240;
+					};
+					4FDB94192FE743AA001E05CB = {
+						CreatedOnToolsVersion = 27.0;
 					};
 				};
 			};
@@ -8092,7 +8143,6 @@
 			);
 			mainGroup = 4FCECD7721092354001F1078;
 			packageReferences = (
-				4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 				4FA40CED28A0CA0A00499E53 /* XCRemoteSwiftPackageReference "ReactiveSwift" */,
 				4FA40CF028A0CA3900499E53 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
 			);
@@ -8104,6 +8154,7 @@
 				4FCECD7F21092354001F1078 /* Mac Mouse Fix Helper */,
 				4F8B01A82C348A3A00F3AF8D /* Localization Screenshot Taker */,
 				4F1667C82C6A6717009E4924 /* XCStringsDummyApp */,
+				4FDB94192FE743AA001E05CB /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -8172,6 +8223,14 @@
 				4FD148C728AA416700FE688C /* MenuBarItem.xib in Resources */,
 				4FD148D628AA43E900FE688C /* MainMenu.xib in Resources */,
 				4F7CFFF12E60F4B900ACEDEF /* Bug Log [Aug 2025] - Scroll Stopped Working.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDB94182FE743AA001E05CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDB94392FE75270001E05CB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8628,6 +8687,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FDB94162FE743AA001E05CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDB943A2FE75270001E05CB /* AppDelegate.m in Sources */,
+				4FDB943B2FE75270001E05CB /* FixDockSwipes.m in Sources */,
+				4FDB943C2FE75270001E05CB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -8682,6 +8751,14 @@
 				4FA2F13F2C2B0932000C5535 /* mul */,
 			);
 			name = ButtonOptionsViewController.xib;
+			sourceTree = "<group>";
+		};
+		4FDB94362FE75270001E05CB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FDB94352FE75270001E05CB /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -8860,7 +8937,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = "3.1.0 Beta 1";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -8903,7 +8980,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = "3.1.0 Beta 1";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bryanoliveira.mac-mouse-fix";
@@ -9010,6 +9087,7 @@
 					"-Wnonnull",
 					"-Wsign-conversion",
 				);
+				__DIAGNOSE_INVALID_DEPLOYMENT_TARGET_AS_ERROR = NO;
 			};
 			name = Debug;
 		};
@@ -9104,6 +9182,7 @@
 					"-Wnonnull",
 					"-Wsign-conversion",
 				);
+				__DIAGNOSE_INVALID_DEPLOYMENT_TARGET_AS_ERROR = NO;
 			};
 			name = Release;
 		};
@@ -9136,7 +9215,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bryanoliveira.mac-mouse-fix.helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -9181,7 +9260,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bryanoliveira.mac-mouse-fix.helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -9194,6 +9273,93 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Helper/SupportFiles/External\"";
+			};
+			name = Release;
+		};
+		4FDB94272FE743AD001E05CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM5Z78756B;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Noah Nuebling. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuebling.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Debug;
+		};
+		4FDB94282FE743AD001E05CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM5Z78756B;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Noah Nuebling. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuebling.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
@@ -9245,17 +9411,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4FDB94262FE743AD001E05CB /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDB94272FE743AD001E05CB /* Debug */,
+				4FDB94282FE743AD001E05CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.7.2;
-			};
-		};
 		4FA40CED28A0CA0A00499E53 /* XCRemoteSwiftPackageReference "ReactiveSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveSwift";
@@ -9275,16 +9442,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F58FE0F2C571DDD00926A00 /* CocoaLumberjack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
-			productName = CocoaLumberjack;
-		};
-		4F58FE112C571DE200926A00 /* CocoaLumberjackSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
-			productName = CocoaLumberjackSwift;
-		};
 		4F7F47CD28A5B5EC00290BBD /* ReactiveSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4FA40CED28A0CA0A00499E53 /* XCRemoteSwiftPackageReference "ReactiveSwift" */;
@@ -9304,16 +9461,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4FA40CF028A0CA3900499E53 /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
 			productName = ReactiveCocoa;
-		};
-		4FEB660E2793510300E6A111 /* CocoaLumberjack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
-			productName = CocoaLumberjack;
-		};
-		4FEB66102793510800E6A111 /* CocoaLumberjackSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F1757BB2675955B009FCB47 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
-			productName = CocoaLumberjackSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
